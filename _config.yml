@@ -1,0 +1,27 @@
+title: Resume and Portfolio for Zach Taylor
+
+author: Zach Taylor
+
+description: Personal resume and portfolio for Zach Taylor, a computer engineer
+
+url: 'https://zachs.info'
+
+copyright: All rights reserved.
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  gzip: nil
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+
+exclude: [
+  'CNAME',
+  'Gemfile',
+  'Gemfile.lock',
+  'README.md',
+  '*.yml',
+  '*.rb'
+]
+
