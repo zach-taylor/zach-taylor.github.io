@@ -8,14 +8,6 @@ url: 'https://zachs.info'
 
 copyright: All rights reserved.
 
-assets:
-  dirname: assets
-  baseurl: /assets/
-  gzip: nil
-  sources:
-    - _assets/javascripts
-    - _assets/stylesheets
-
 exclude: [
   'CNAME',
   'Gemfile',
