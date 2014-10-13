@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include layout/head.html %}
+  </head>
+
+  <body>
+    {% include layout/navbar.html %}
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h1 class="text-center">{{ page.title }}</h1>
+        <h2 class="subheader text-center">{{ page.subtitle }}</h2>
+        {{ content }}
+      </div>
+    </div>
+
+    {% include layout/footer.html %}
+  </body>
+</html>
