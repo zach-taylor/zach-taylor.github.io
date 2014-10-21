@@ -3,7 +3,7 @@ layout: post
 title: NCDC 2014 Web Application
 ---
 
-This is a follow-up post about the web application from ISU NCDC 2014. My code for the application is located on my Github account here.
+This is a follow-up post about the web application from ISU NCDC 2014. My code for the application is located on my Github account [here](https://github.com/zach-taylor/NCDC2014).
 
 Below I’ve included a report I submitted during the competition about the vulnerabilities and mitigations in the application.
 
@@ -22,7 +22,7 @@ Since the login form is not the only form that is injectable, we would have to a
 ##### Reflected XSS
 Since no parameters were checked in the timesheet functions, it safe to assume that our app is vulnerable to this attack. However, I was unable to reproduce the issues using provided POCs. We did set the X-XSS-Protection: 1; mode=block id header setting in our Apache configuration, which may have helped to prevent some XSS vulnerabilities.
 
-It seems there is some information about escaping the output of user input here: [](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.231__HTML_Escape_Before_Inserting_Untrusted_Data_into_HTML_Element_Content)
+It seems there is some information about escaping the output of user input [here.](https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet#RULE_.231__HTML_Escape_Before_Inserting_Untrusted_Data_into_HTML_Element_Content)
 
 There are less unchecked params than unescaped SQL queries, so I would estimate the mitigation for this would take one or two days for one full-time engineer.
 
@@ -42,7 +42,7 @@ We did not mitigate this code. We did notice these lines, however, we forgot to 
 It could potentially take a full-time engineer less than one day to fix this and implement it properly.
 
 ##### Known Session Identifiers
-We fixed this issue by implementing session management in our application. For reference we used this cheat sheet: https://www.owasp.org/index.php/Session_Management_Cheat_Sheet
+We fixed this issue by implementing session management in our application. For reference we used this cheat sheet: [Session Management Cheat Sheet](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 
 The session gets properly set in the user’s browser and has the HttpOnly and Secure options added to prevent tampering and hijack attempts.
 
@@ -54,7 +54,7 @@ The POC would not work because we migrated our app to an entirely new OS.
 To mitigate this issue it would require removing the offending code and two full-time engineers one or two days to patch it.
 
 ##### Buffer Overflows and Memory Leaks
-Some of the functions the app are vulnerable to would be most of the string functions. Since many times string functions use the \0 (null) character to terminate, it can easy to miss this character or accidentally truncate it. This could potentially end up with a string of undefined length. The functions reach into memory until it finds a null character. Some of the string functions could be: sprintf, strcmp, strdup, etc. There are a class of ‘n’ string functions allow for specification of length which could prevent these issues.
+Some of the functions the app are vulnerable to would be most of the string functions. Since many times string functions use the \0 (null) character to terminate, it can be easy to miss this character or accidentally truncate it. This could potentially end up with a string of undefined length. The functions reach into memory until it finds a null character. Some of the string functions could be: sprintf, strcmp, strdup, etc. There are a class of ‘n’ string functions allow for specification of length which could prevent these issues.
 
 We were unable to mitigate these issues, however, in almost all Linux OSs, memory not allocated to the application can not be read.
 
