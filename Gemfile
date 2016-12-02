@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.3.3'
 
 gem 'github-pages'
 gem 'RedCloth', '>= 4.3.0'

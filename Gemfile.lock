@@ -129,3 +129,9 @@ DEPENDENCIES
   github-pages
   nokogiri (>= 1.6.8)
   redcarpet (>= 3.2.3)
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.13.6
