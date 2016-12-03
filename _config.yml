@@ -9,6 +9,8 @@ url: 'https://zachs.info'
 copyright: All rights reserved.
 
 exclude: [
+  '.ruby-gemset',
+  '.ruby-version',
   'CNAME',
   'Gemfile',
   'Gemfile.lock',
