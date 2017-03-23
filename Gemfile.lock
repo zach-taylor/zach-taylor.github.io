@@ -96,7 +96,7 @@ GEM
     minitest (5.9.1)
     multipart-post (2.0.0)
     net-dns (0.8.0)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
@@ -127,11 +127,10 @@ DEPENDENCIES
   RedCloth (>= 4.3.0)
   activesupport (~> 4.1.11)
   github-pages
-  nokogiri (>= 1.6.8)
+  nokogiri (>= 1.7.1)
   redcarpet (>= 3.2.3)
 
 RUBY VERSION
    ruby 2.3.3p222
-
 BUNDLED WITH
    1.13.6
